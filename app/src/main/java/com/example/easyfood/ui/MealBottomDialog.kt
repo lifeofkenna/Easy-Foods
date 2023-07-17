@@ -11,12 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.easyfood.R
 import com.example.easyfood.ui.activites.MealDetailesActivity
 import com.example.easyfood.ui.fragments.HomeFragment
-import com.example.easyfood.util.Constants.Companion.CATEGORY_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_AREA
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
+
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class MealBottomDialog() : BottomSheetDialogFragment() {
@@ -25,6 +20,13 @@ class MealBottomDialog() : BottomSheetDialogFragment() {
     private var mealImg = ""
     private var mealCountry = ""
     private var mealCategory = ""
+    private var CATEGORY_NAME = ""
+    private var MEAL_AREA = ""
+    private var MEAL_THUMB = ""
+    private var MEAL_STR = ""
+    private var MEAL_NAME = ""
+    private var MEAL_ID = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +63,7 @@ class MealBottomDialog() : BottomSheetDialogFragment() {
 
     }
 
-    fun prepareView(view:View){
+    private fun prepareView(view:View){
         val tvMealName = view.findViewById<TextView>(R.id.tv_meal_name_in_btmsheet)
         val tvMealCategory = view.findViewById<TextView>(R.id.tv_meal_category)
         val tvMealCountry = view.findViewById<TextView>(R.id.tv_meal_country)

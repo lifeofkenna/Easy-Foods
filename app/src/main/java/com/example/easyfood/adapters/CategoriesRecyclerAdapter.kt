@@ -10,14 +10,14 @@ import com.example.easyfood.databinding.CategoryCardBinding
 class CategoriesRecyclerAdapter : RecyclerView.Adapter<CategoriesRecyclerAdapter.CategoryViewHolder>() {
     private var categoryList:List<Category> = ArrayList()
     private lateinit var onItemClick: OnItemCategoryClicked
-    private lateinit var onLongCategoryClick:OnLongCategoryClick
+    private lateinit var onLongCategoryClick: OnLongCategoryClick
 
     fun setCategoryList(categoryList: List<Category>){
         this.categoryList = categoryList
         notifyDataSetChanged()
     }
 
-    fun setOnLongCategoryClick(onLongCategoryClick:OnLongCategoryClick){
+    fun setOnLongCategoryClick(onLongCategoryClick: OnLongCategoryClick){
         this.onLongCategoryClick = onLongCategoryClick
     }
 
